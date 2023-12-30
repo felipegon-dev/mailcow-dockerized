@@ -1,1 +1,14 @@
 # rspamd.conf.local
+bayes {
+  max_messages = 100000;
+}
+
+#-- Configuración de almacenamiento de datos aprendidos
+learn_cache {
+  expiry = 30d; # -- Elimina datos aprendidos después de 30 días
+}
+
+#-- Configuración de la caché de resultados
+cache {
+  expire = 30d;  #-- Elimina resultados de caché después de 30 días
+}
